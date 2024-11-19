@@ -1,0 +1,157 @@
+/* Tailwind Base, Components, and Utilities */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom Global Styles */
+* {
+  transition: all 0.3s ease;
+  box-sizing: border-box;
+}
+
+/* Center the app */
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #f0f4f8;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 16px;
+}
+
+h1,
+h2 {
+  text-align: center;
+}
+
+/* Message Cards */
+.message-card {
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  background-color: #fff;
+}
+
+.message-card:hover {
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+  transform: translateY(-5px);
+}
+
+/* Different backgrounds based on weather conditions */
+.sunny {
+  background-color: #fbd38d; /* Sunny yellow */
+}
+
+.cloudy {
+  background-color: #e2e8f0; /* Light gray for cloudy */
+}
+
+.rainy {
+  background-color: #60a5fa; /* Rainy blue */
+}
+
+.snowy {
+  background-color: #bfdbfe; /* Snowy light blue */
+}
+
+/* Typography */
+.sender {
+  font-weight: bold;
+  font-size: 1.25rem;
+  color: #2d3748; /* Darker text for the sender */
+}
+
+.timestamp {
+  font-size: 0.875rem;
+  color: #718096; /* Gray for timestamp */
+}
+
+/* Buttons */
+button {
+  transition: background-color 0.2s ease, transform 0.2s ease, box-shadow 0.3s ease;
+  padding: 0.75rem;
+  border-radius: 0.375rem;
+  font-weight: 600;
+}
+
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+button:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.4);
+}
+
+button:active {
+  transform: translateY(0);
+}
+
+/* Custom Input Fields */
+input[type="text"], input[type="number"], textarea {
+  width: 100%;
+  padding: 1rem;
+  font-size: 1rem;
+  border-radius: 0.375rem;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+input[type="text"]:focus, input[type="number"]:focus, textarea:focus {
+  border-color: #4f46e5;
+  box-shadow: 0 2px 5px rgba(79, 70, 229, 0.3);
+}
+
+/* Buttons */
+button.bg-indigo {
+  background-color: #4f46e5;
+  color: white;
+}
+
+button.bg-indigo:hover {
+  background-color: #4338ca;
+}
+
+button.bg-green {
+  background-color: #10b981; /* Green for save */
+  color: white;
+}
+
+button.bg-green:hover {
+  background-color: #059669;
+}
+
+button.bg-gray {
+  background-color: #d1d5db; /* Gray for cancel */
+  color: #4b5563;
+}
+
+button.bg-gray:hover {
+  background-color: #9ca3af;
+  color: #1f2937;
+}
+
+/* For Centered Layout */
+.app-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.form-container, .weather-list-container {
+  width: 100%;
+  max-width: 600px;
+}
+
+/* Responsive Design for Small Screens */
+@media (max-width: 640px) {
+  .message-card {
+    padding: 1rem;
+  }
+}
